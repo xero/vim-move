@@ -141,6 +141,9 @@ license.
 ===============================================================================
 3. Changelog                                                   *move-changelog*
 
+v1.4.x
+    * set default modifier to shift
+	* removed move char feature
 v1.4
     * Released on 08/19/18
     * New functionality for moving horizontally

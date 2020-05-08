@@ -49,6 +49,10 @@ which will create the following key bindings:
 
 And so on...
 
+## Personal Mods
+
+this version sets the default modifier to `shift` and removes the ability to move individual characters (line and blockwise features work as normal).
+
 ## License
 
 This plugin is licensed under MIT license.

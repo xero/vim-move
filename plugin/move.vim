@@ -2,6 +2,7 @@
 " File: plugin/move.vim
 " Description: Move lines and selections up and even down.
 " Author: Matthias Vogelgesang <github.com/matze>
+" Mod: removed ability to move individual chars left and right
 " =============================================================================
 
 if exists('g:loaded_move') || &compatible
@@ -15,7 +16,7 @@ if !exists('g:move_map_keys')
 endif
 
 if !exists('g:move_key_modifier')
-    let g:move_key_modifier = 'A'
+    let g:move_key_modifier = 'S'
 endif
 
 if !exists('g:move_auto_indent')
@@ -239,8 +240,6 @@ nnoremap <silent> <Plug>MoveLineDown            :call <SID>MoveLineDown(1)<CR>
 nnoremap <silent> <Plug>MoveLineUp              :call <SID>MoveLineUp(1)<CR>
 nnoremap <silent> <Plug>MoveLineHalfPageDown    :call <SID>MoveLineHalfPageDown()<CR>
 nnoremap <silent> <Plug>MoveLineHalfPageUp      :call <SID>MoveLineHalfPageUp()<CR>
-nnoremap <silent> <Plug>MoveCharLeft            :<C-u>call <SID>MoveCharLeft()<CR>
-nnoremap <silent> <Plug>MoveCharRight           :<C-u>call <SID>MoveCharRight()<CR>
 
 
 if g:move_map_keys
@@ -251,6 +250,4 @@ if g:move_map_keys
 
     execute 'nmap' s:MoveKey('j') '<Plug>MoveLineDown'
     execute 'nmap' s:MoveKey('k') '<Plug>MoveLineUp'
-    execute 'nmap' s:MoveKey('h') '<Plug>MoveCharLeft'
-    execute 'nmap' s:MoveKey('l') '<Plug>MoveCharRight'
 endif
